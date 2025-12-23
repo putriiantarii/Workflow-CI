@@ -19,9 +19,6 @@ Setelah mencoba logging ke MLflow, saya juga mencoba untuk logging ke Dagshub UI
 ##1. Install Library MLflow dan Dagshub
 """
 
-!pip install mlflow scikit-learn pandas
-
-!pip install dagshub
 
 """##2. Import Library"""
 
