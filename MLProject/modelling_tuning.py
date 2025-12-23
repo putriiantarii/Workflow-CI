@@ -100,13 +100,13 @@ with mlflow.start_run():
     mlflow.sklearn.log_model(best_model, "model")
 
 #Menjalankan MLflow UI
-!nohup mlflow ui --host 127.0.0.1 --port 5000 &> mlflow.log &
+
 
 #Mengecek Apakah port 5000 Terbuka atau Tidak
-!netstat -tulpn | grep 5000
+
 
 #Install pyngrok
-!pip install pyngrok
+
 
 from pyngrok import ngrok
 
@@ -114,7 +114,7 @@ from pyngrok import ngrok
 ngrok.set_auth_token("37CRa3XYVY587gwuixSl6TeBJM6_7pEVsU9DSYmS4erqJUMSa")
 
 # Jalankan MLflow UI jika belum
-!nohup mlflow ui --host 127.0.0.1 --port 5000 &> mlflow.log &
+
 
 # Buat tunnel baru
 public_url = ngrok.connect(5000, host_header="127.0.0.1")
@@ -162,7 +162,7 @@ print("Logging ke DagsHub selesai.")
 
 """##8. Membuat File requirements.txt"""
 
-!pip freeze > requirements.txt
+
 
 """##9. Membuat File DagsHub.txt"""
 
